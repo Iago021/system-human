@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeto System: Human / Feccetec 2025</title>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav" role="navigation" aria-label="Menu principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SH</div>
+        <div>
+          <div style="font-weight:700">System: Human</div>
+          <div class="muted" style="font-size:12px">Tema: inclusão e conscientização</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#time">História</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#features">Recursos</a></li>
+          <li><a href="#media">Mídia</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero fade-section" aria-labelledby="hero-heading">
+      <div class="hero-left fade-in">
+        <div class="kicker">System: Human</div>
+        <h1 id="hero-heading" class="glow-title">Para uma cidade ser tecnológica, ela precisa ser inclusiva.</h1>
+        <p class="lead">Conheça um pouco mais sobre nosso jogo e o propósito por trás dele.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-ghost" onclick="shiftGallery(-1)" aria-label="Anterior">◀</button>
+          <button class="btn btn-ghost" onclick="shiftGallery(1)" aria-label="Próximo">▶</button>
+        </div>
+      </div>
+
+      <aside class="hero-card fade-in" aria-label="Mockup do jogo">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Preview</div>
+
+        <div class="mock-scene" id="mockScene">
+          <img src="img/sistem1.jpeg" width="384" height="320" alt="Screenshot do jogo System: Human">
+        </div>
+
+        <div class="mock-footer">
+          <div style="display:flex;flex-direction:column">
+            <strong>System: Human</strong>
+            <span class="muted">Versão demo (em breve)</span>
+          </div>
+          <div style="flex:1"></div>
+          <div class="muted">Feccetec 2025</div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="timeline-section fade-section" id="time" aria-label="Linha do tempo do projeto">
+      <div class="container">
+          <h2 class="titulo">Linha de desenvolvimento</h2>
+          <div class="timeline" role="list">
+              <div class="timeline-item left" role="listitem">
+                  <div class="content">
+                      <h3>Ideia inicial</h3>
+                      <p>Início: levantamos as ideias do projeto, pensando em algo inclusivo e interativo para promover conscientização sobre as dificuldades que pessoas com deficiência (PCD) enfrentam.</p>
+                  </div>
+              </div>
+              <div class="timeline-item right" role="listitem">
+                  <div class="content">
+                      <h3>Conclusão da ideia inicial</h3>
+                      <p>Decidimos criar um jogo que represente as dificuldades do cotidiano enfrentadas por pessoas com deficiência.</p>
+                  </div>
+              </div>
+              <div class="timeline-item left" role="listitem">
+                  <div class="content">
+                      <h3>Pesquisas e entrevistas</h3>
+                      <p>Realizamos entrevistas e levantamentos em Mogi Guaçu para identificar barreiras e necessidades reais.</p>
+                  </div>
+              </div>
+              <div class="timeline-item right" role="listitem">
+                  <div class="content">
+                      <h3>Criação do jogo</h3>
+                      <p>Iniciamos a programação do jogo, usando ferramentas como GameMaker, Git/GitHub e Pixel Art.</p>
+                  </div>
+              </div>
+              <div class="timeline-item left" role="listitem">
+                  <div class="content">
+                      <h3>Objetivo final</h3>
+                      <p>Nosso objetivo é aumentar a conscientização e plantar ideias para melhorar a acessibilidade em Mogi Guaçu.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="about" class="fade-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">Sobre o projeto</h2>
+      <p class="muted">O jogo se passa em um prédio, onde a protagonista Luna explora e observa as dificuldades vivenciadas por pessoas com deficiência.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Design</h3>
+          <p class="muted">Paleta inspirada em tons de azul e cores vivas.</p>
+        </div>
+        <div class="card">
+          <h3>Mecânicas</h3>
+          <p class="muted">Espaço para listar mecânicas: exploração, interação e progressão.</p>
+        </div>
+        <div class="card">
+          <h3>Comunidade</h3>
+          <p class="muted">Links para redes, repositórios e canais de desenvolvimento.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="features" class="fade-section" aria-labelledby="features-heading">
+      <h2 id="features-heading">Recursos</h2>
+      <p class="muted">Principais elementos e destaques do jogo.</p>
+      <div class="gallery" id="gallery" aria-label="Galeria de screenshots" tabindex="0">
+        <div class="slide">Screenshot 1</div>
+        <div class="slide">Screenshot 2</div>
+        <div class="slide">Screenshot 3</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="media" class="fade-section" aria-labelledby="media-heading">
+      <h2 id="media-heading">Mídia</h2>
+      <div class="card">
+        <strong>Trailer (exemplo)</strong>
+        <div style="margin-top:8px">
+          <div style="background:rgba(0,0,0,0.4);height:220px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Player de vídeo (embed)</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;align-items:center;justify-content:space-between; gap:12px;flex-wrap:wrap">
+        <div class="muted">© Projeto — Modelo editável.</div>
+        <div class="muted">Feito com ❤️ — Edite este arquivo para personalizar</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
