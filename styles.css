@@ -681,3 +681,127 @@ footer .wrap > div {
     justify-content: center;
   }
 }
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.slide {
+  background: rgba(121, 199, 255, 0.05);
+  border: 1px solid rgba(121, 199, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 340px;
+  flex: 1 1 300px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+.slide:hover {
+  transform: scale(1.03);
+  border-color: rgba(121, 199, 255, 0.4);
+  background: rgba(121, 199, 255, 0.08);
+}
+
+/* Seção de Patrocinadores com Tabela - IMAGENS MUITO GRANDES */
+.patrocinadores {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.patrocinadores h3 {
+  font-size: 2rem; /* Título maior */
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.tabela-patrocinadores {
+  width: 100%;
+  max-width: 1400px; /* Largura máxima muito maior */
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 60px 40px; /* Espaçamento máximo entre imagens */
+}
+
+.tabela-patrocinadores td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.tabela-patrocinadores img {
+  max-width: 400px;  /* IMAGENS EXTRA GRANDES */
+  max-height: 200px; /* IMAGENS EXTRA GRANDES */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0.9);
+}
+
+.tabela-patrocinadores img:hover {
+  transform: scale(1.2); /* Efeito hover mais pronunciado */
+  filter: brightness(1);
+}
+
+/* Ajustes responsivos para imagens extra grandes */
+@media (max-width: 1200px) {
+  .tabela-patrocinadores {
+    border-spacing: 50px 35px;
+    max-width: 1200px;
+  }
+  
+  .tabela-patrocinadores img {
+    max-width: 300px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tabela-patrocinadores {
+    border-spacing: 40px 30px;
+    max-width: 900px;
+  }
+  
+  .tabela-patrocinadores img {
+    max-width: 250px;
+    max-height: 125px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabela-patrocinadores {
+    border-spacing: 30px 20px;
+  }
+  
+  .tabela-patrocinadores img {
+    max-width: 200px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela-patrocinadores {
+    border-spacing: 20px 15px;
+  }
+  
+  .tabela-patrocinadores img {
+    max-width: 150px;
+    max-height: 75px;
+  }
+}
