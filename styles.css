@@ -61,16 +61,10 @@ header {
 }
 
 .logo {
-  width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  color: #0b0f14;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 48px;
   border-radius: 10px;
-  font-weight: 800;
-  font-size: 18px;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
@@ -230,22 +224,23 @@ h1 {
 }
 
 .mock-scene {
-  height: 250px;
-  border-radius: 12px;
-  background: rgba(6, 16, 25, 0.8);
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(121,199,255,0.15), rgba(6,16,25,0.9));
+  border: 1px solid rgba(121, 199, 255, 0.2);
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border: 1px solid rgba(121, 199, 255, 0.1);
-  margin-bottom: 12px;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 0.6s ease;
 }
 
 .mock-scene img {
   border-radius: 8px;
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .mock-footer {
@@ -759,56 +754,94 @@ footer .wrap > div {
   filter: brightness(1);
 }
 
-/* Ajustes responsivos para imagens extra grandes */
-@media (max-width: 1200px) {
-  .tabela-patrocinadores {
-    border-spacing: 50px 35px;
-    max-width: 1200px;
-  }
-  
-  .tabela-patrocinadores img {
-    max-width: 300px;
-    max-height: 150px;
-  }
+/* ===== PATROCINADORES - DUAS LINHAS FIXAS (3x2) ===== */
+.patrocinadores {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
 }
 
+.patrocinadores h3 {
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(121, 199, 255, 0.25);
+}
+
+/* Grid com 3 colunas em desktop (força 3 por linha) */
+.patrocinadores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas em telas grandes */
+  gap: 36px 40px; /* gap entre linhas e colunas */
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* Caixa individual para cada logo — facilita centralizar e dimensionar */
+.patrocinador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: rgba(255,255,255,0.01); /* sutil */
+  border-radius: 10px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* Tamanho visual controlado das imagens */
+.patrocinador img {
+  max-width: 100%;
+  width: 200px;       /* largura base para desktop */
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.9) drop-shadow(0 0 6px rgba(121,199,255,0.15));
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+/* Hover elegante */
+.patrocinador:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+.patrocinador:hover img {
+  transform: scale(1.06);
+  filter: brightness(1) drop-shadow(0 0 18px rgba(121,199,255,0.28));
+}
+
+/* ===== RESPONSIVIDADE: tablet -> 2 colunas, mobile -> 1 coluna ===== */
 @media (max-width: 992px) {
-  .tabela-patrocinadores {
-    border-spacing: 40px 30px;
-    max-width: 900px;
-  }
-  
-  .tabela-patrocinadores img {
-    max-width: 250px;
-    max-height: 125px;
-  }
+  .patrocinador img { width: 170px; }
+  .patrocinadores-grid { gap: 28px 32px; }
 }
 
 @media (max-width: 768px) {
-  .tabela-patrocinadores {
-    border-spacing: 30px 20px;
+  .patrocinadores-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+    gap: 26px 24px;
   }
-  
-  .tabela-patrocinadores img {
-    max-width: 200px;
-    max-height: 100px;
-  }
+  .patrocinador img { width: 150px; }
 }
 
 @media (max-width: 480px) {
-  .tabela-patrocinadores {
-    border-spacing: 20px 15px;
+  .patrocinadores-grid {
+    gap: 18px;
   }
-  
-  .tabela-patrocinadores img {
-    max-width: 150px;
-    max-height: 75px;
-  }
+  .patrocinador img { width: 140px; }
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
+.insta:link{
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.insta:hover, .insta:active {
+  background-color: red;
 }
